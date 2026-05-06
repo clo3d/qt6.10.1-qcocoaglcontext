@@ -1,6 +1,6 @@
-# qt6.10.1-qcocoaglcontext
+# qt6.10.3-qcocoaglcontext
 
-A public source release of a patch for the OpenGL context bug in the Qt 6.10.1 macOS Cocoa platform plugin.
+A public source release of a patch for the OpenGL context bug in the Qt 6.10.3 macOS Cocoa platform plugin.
 
 ## Patched Bug
 
@@ -12,7 +12,7 @@ The patched source is published here so that anyone affected by the same issue c
 
 ## How to Build
 
-The included `patch_build.sh` script builds the patched Cocoa platform plugin (`libqcocoa.dylib`) for Qt 6.10.1.
+The included `patch_build.sh` script builds the patched Cocoa platform plugin (`libqcocoa.dylib`) for Qt 6.10.3.
 
 ```bash
 ./patch_build.sh
@@ -20,14 +20,14 @@ The included `patch_build.sh` script builds the patched Cocoa platform plugin (`
 
 The script performs the following steps:
 
-- Clones `qtbase` at tag `v6.10.1` from the official Qt repository (with a GitHub mirror fallback) into `~/qt-source-build/qtbase`.
+- Clones `qtbase` at tag `v6.10.3` from the official Qt repository (with a GitHub mirror fallback) into `~/qt-source-build/qtbase`.
 - Overlays the patched `qcocoaglcontext.mm` from this repository onto the cloned source.
 - Configures `qtbase` standalone and builds only the `QCocoaIntegrationPlugin` target.
 - Prints the path to the resulting `plugins/platforms/libqcocoa.dylib`.
 
 Default build options:
 
-- Install prefix: `/usr/local/Qt-6.10.1-CocoaOnly`
+- Install prefix: `/usr/local/Qt-6.10.3-CocoaOnly`
 - Architectures: `arm64;x86_64` (Universal Binary)
 - Minimum deployment target: macOS 12.0
 - Build type: Release
@@ -51,7 +51,7 @@ The patched plugin is a drop-in replacement for the stock `libqcocoa.dylib`. Loc
 cp libqcocoa.dylib MyApp.app/Contents/PlugIns/platforms/libqcocoa.dylib
 
 # Or against a Qt installation prefix
-cp libqcocoa.dylib /usr/local/Qt-6.10.1-CocoaOnly/plugins/platforms/libqcocoa.dylib
+cp libqcocoa.dylib /usr/local/Qt-6.10.3-CocoaOnly/plugins/platforms/libqcocoa.dylib
 ```
 
 ### 2. Re-signing the replaced library

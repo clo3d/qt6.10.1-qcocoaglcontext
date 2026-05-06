@@ -3,7 +3,7 @@
 set -e
 
 # 환경 변수 설정
-QT_VERSION="6.10.1"
+QT_VERSION="6.10.3"
 QT_TAG="v${QT_VERSION}"
 QTBASE_REPO="https://code.qt.io/qt/qtbase.git"
 QTBASE_REPO_MIRROR="https://github.com/qt/qtbase.git"
